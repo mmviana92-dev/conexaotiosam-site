@@ -1,0 +1,23 @@
+# Rebuilds the site every 6 hours so the Videos page follows the channel's public RSS feed (no API key, no secrets).
+name: Atualizar vídeos
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/build.mjs
+      - name: Commit if something changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "chore: update videos from the YouTube feed" && git push)
