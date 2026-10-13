@@ -1,6 +1,11 @@
 {
-  "updated": "2026-10-12T18:33:27.384Z",
+  "updated": "2026-10-13T12:38:49.654Z",
   "videos": [
+    {
+      "id": "bcDAjAXUmKY",
+      "title": "5 Profissões em Alta Demanda nos EUA para Brasileiros 2026",
+      "published": "2026-10-13T04:02:04+00:00"
+    },
     {
       "id": "LoZN4gcre24",
       "title": "Agendamento Consulado Brasil em Boston: Passo a Passo",
@@ -70,11 +75,6 @@
       "id": "JJ1mVdmSJ3E",
       "title": "Tecnologia ao nosso dispor. O que você acha ???",
       "published": "2023-03-12T02:49:58+00:00"
-    },
-    {
-      "id": "JJkfe4UC2YA",
-      "title": "Artes na mão do artista. #arteparavida #arte #art",
-      "published": "2023-02-08T21:27:05+00:00"
     }
   ]
 }
